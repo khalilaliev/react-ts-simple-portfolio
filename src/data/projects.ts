@@ -1,6 +1,7 @@
 import proshop from "../assets/proshop.png";
 import pizzaday from "../assets/pizzaday.png";
 import weather from "../assets/weather.png";
+import todo from "../assets/todo.png";
 interface IProjects {
   id: number;
   title: string;
@@ -8,6 +9,8 @@ interface IProjects {
   imageUrl: string;
   link: string;
   gitHub?: string;
+  stack?: string;
+  platform?: string;
 }
 
 export const projects: IProjects[] = [
@@ -19,6 +22,8 @@ export const projects: IProjects[] = [
     imageUrl: proshop,
     link: "https://proshop-gu6d.onrender.com",
     gitHub: "https://github.com/khalilaliev/react-proshop",
+    platform: "Web",
+    stack: "ReactJS, Bootstrap, NodeJS, MongoDB",
   },
   {
     id: 2,
@@ -28,6 +33,8 @@ export const projects: IProjects[] = [
     imageUrl: pizzaday,
     link: "https://react-pizzaday.vercel.app",
     gitHub: "https://github.com/khalilaliev/react-pizzaday",
+    platform: "Web",
+    stack: "ReactJS, TailwindCSS",
   },
   {
     id: 3,
@@ -36,5 +43,18 @@ export const projects: IProjects[] = [
     imageUrl: weather,
     link: "https://khalilaliev.github.io/simple-weather-app/",
     gitHub: "https://github.com/khalilaliev/simple-weather-app",
+    platform: "Web",
+    stack: "HTML/CSS, TailwindCSS, JavaScript, RippleUI",
+  },
+  {
+    id: 4,
+    title: "Todo",
+    description:
+      "Using ReactJS simple todo app with the ability to set priority",
+    imageUrl: todo,
+    link: "https://react-hw-3-one.vercel.app/",
+    gitHub: "https://github.com/khalilaliev/react-hw-3",
+    platform: "Web",
+    stack: "ReactJS, TailwindCSS,",
   },
 ];

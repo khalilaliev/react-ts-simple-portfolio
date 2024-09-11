@@ -23,6 +23,18 @@ const ProjectsDetail: FC = () => {
         </Link>
         <h1 className="font-light text-xl">{project.description}</h1>
       </div>
+      <div className="flex items-center gap-2 mt-5">
+        <span className="bg-blue-200 py-1 px-2 rounded-xl text-sm text-blue-700 font-medium">
+          Platform{" "}
+        </span>{" "}
+        <p className="font-light">{project.platform}</p>
+      </div>
+      <div className="flex items-center gap-2 mt-5">
+        <span className="bg-blue-200 py-1 px-2 rounded-xl text-sm text-blue-700 font-medium">
+          Stack{" "}
+        </span>{" "}
+        <p className="font-light">{project.stack}</p>
+      </div>
       <div className="mt-5 text-left">
         <a
           className="text-blue-500 text-lg flex justify-start max-w-36 items-center gap-2 hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all"
