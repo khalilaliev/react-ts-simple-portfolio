@@ -38,7 +38,7 @@ const ProjectsDetail: FC = () => {
           href={project.gitHub}
           target="_blank"
         >
-          Live preview <FaGithub />
+          GitHub repo <FaGithub />
         </a>
       </div>
     </div>

@@ -6,11 +6,11 @@ const Projects: FC = () => {
   return (
     <div className="container mx-auto">
       <h1 className="text-4xl font-bold mb-8">My Projects</h1>
-      <div className="flex md:flex-row flex-col justify-center gap-8 w-fit">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="flex flex-col bg-white shadow-lg rounded-lg overflow-hidden w-full sm:w-72 hover:translate duration-300 transition-all"
+            className="flex flex-col bg-white shadow-lg rounded-lg overflow-hidden w-full hover:-translate-y-1 duration-300 transition-all"
           >
             <div className="flex-shrink-0">
               <img

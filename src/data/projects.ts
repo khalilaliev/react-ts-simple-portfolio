@@ -1,5 +1,6 @@
 import proshop from "../assets/proshop.png";
 import pizzaday from "../assets/pizzaday.png";
+import weather from "../assets/weather.png";
 interface IProjects {
   id: number;
   title: string;
@@ -27,5 +28,13 @@ export const projects: IProjects[] = [
     imageUrl: pizzaday,
     link: "https://react-pizzaday.vercel.app",
     gitHub: "https://github.com/khalilaliev/react-pizzaday",
+  },
+  {
+    id: 3,
+    title: "Simple Weather",
+    description: "Using just HTML/CSS and JS simple weather app",
+    imageUrl: weather,
+    link: "https://khalilaliev.github.io/simple-weather-app/",
+    gitHub: "https://github.com/khalilaliev/simple-weather-app",
   },
 ];
