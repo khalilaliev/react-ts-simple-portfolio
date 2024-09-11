@@ -81,7 +81,8 @@ const About: FC = () => {
         <ul className="mt-3 space-y-2">
           <li className="max-w-32">
             <a
-              href="#"
+              href="https://github.com/khalilaliev"
+              target="_blank"
               className="flex text-lg items-center hover:text-blue-500 transition-all duration-300 gap-2"
             >
               <FaGithub className="text-xl" /> GitHub
@@ -89,7 +90,8 @@ const About: FC = () => {
           </li>
           <li className="max-w-32">
             <a
-              href="#"
+              href="https://www.linkedin.com/in/khalil-aliiev-b31036298/"
+              target="_blank"
               className="flex text-lg items-center hover:text-blue-500 transition-all duration-300 gap-2"
             >
               <FaLinkedin className="text-xl" /> Linkedin
@@ -97,7 +99,8 @@ const About: FC = () => {
           </li>
           <li className="max-w-32">
             <a
-              href="#"
+              href="https://www.instagram.com/khalilaliev/"
+              target="_blank"
               className="flex text-lg items-center hover:text-blue-500 transition-all duration-300 gap-2"
             >
               <FaInstagram className="text-xl" /> Instagram
