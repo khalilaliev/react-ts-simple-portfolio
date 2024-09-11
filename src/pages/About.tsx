@@ -4,6 +4,7 @@ import { skills } from "../data/skills";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { GrProjects } from "react-icons/gr";
+import logo from "../assets/logo.jpg";
 
 const About: FC = () => {
   return (
@@ -22,7 +23,7 @@ const About: FC = () => {
         </div>
         <div className="flex justify-center items-center p-4">
           <img
-            src="/src/assets/logo.jpg"
+            src={logo}
             alt="my photo"
             className="w-32 h-32 rounded-full border-2 shadow-xl  object-cover"
           />

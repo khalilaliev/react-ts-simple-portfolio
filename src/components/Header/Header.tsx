@@ -53,7 +53,9 @@ const Header: FC = () => {
               <Link
                 to="/projects"
                 className={` font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
-                  pathname === "/projects" ? "text-blue-500" : ""
+                  pathname === "/projects" || /^\/projects\/\d+$/.test(pathname)
+                    ? "text-blue-500"
+                    : ""
                 }`}
               >
                 Projects
