@@ -1,8 +1,11 @@
+import "./style.css";
 import { FC, useEffect, useState } from "react";
 import { FaNodeJs } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,24 +29,55 @@ const Header: FC = () => {
       }`}
     >
       <div className=" flex items-center justify-between py-6 ">
-        <a
-          href="#"
+        <Link
+          to="/"
           className=" font-semibold flex items-center justify-between gap-2"
         >
           {" "}
           <FaNodeJs className="text-2xl" /> Khalil Aliiev
-        </a>
+        </Link>
 
         <nav>
           <ul className="flex items-center justify-between gap-5">
             <li>
-              <a href="#">About</a>
+              <Link
+                to="/"
+                className={`border-b-2 border-transparent hover:border-black transition duration-300 ease-in-out ${
+                  pathname === "/" ? "active-link" : ""
+                }`}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <Link
+                to="/about"
+                className={`border-b-2 border-transparent hover:border-black transition duration-300 ease-in-out ${
+                  pathname === "/about" ? "active-link" : ""
+                }`}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <Link
+                to="/projects"
+                className={`border-b-2 border-transparent hover:border-black transition duration-300 ease-in-out ${
+                  pathname === "/projects" ? "active-link" : ""
+                }`}
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog"
+                className={`border-b-2 border-transparent hover:border-black transition duration-300 ease-in-out ${
+                  pathname === "/blog" ? "active-link" : ""
+                }`}
+              >
+                Blog
+              </Link>
             </li>
           </ul>
         </nav>
