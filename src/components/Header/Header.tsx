@@ -24,7 +24,7 @@ const Header: FC = () => {
   }, []);
   return (
     <div
-      className={`max-w-3xl my-0 mx-auto bg-white rounded-xl shadow-xl container fixed top-0 left-0 right-0 transition-colors duration-300 ${
+      className={`max-w-3xl my-0 mx-auto bg-white z-50 rounded-xl shadow-xl container fixed top-0 left-0 right-0 transition-colors duration-300 ${
         isScrolled ? "bg-opacity-80 backdrop-blur-sm" : "bg-opacity-100"
       }`}
     >
@@ -42,18 +42,8 @@ const Header: FC = () => {
             <li>
               <Link
                 to="/"
-                className={`border-b-2 border-transparent hover:border-black transition duration-300 ease-in-out ${
-                  pathname === "/" ? "active-link" : ""
-                }`}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className={`border-b-2 border-transparent hover:border-black transition duration-300 ease-in-out ${
-                  pathname === "/about" ? "active-link" : ""
+                className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
+                  pathname === "/" ? "text-blue-500" : ""
                 }`}
               >
                 About
@@ -62,8 +52,8 @@ const Header: FC = () => {
             <li>
               <Link
                 to="/projects"
-                className={`border-b-2 border-transparent hover:border-black transition duration-300 ease-in-out ${
-                  pathname === "/projects" ? "active-link" : ""
+                className={` font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
+                  pathname === "/projects" ? "text-blue-500" : ""
                 }`}
               >
                 Projects
@@ -72,8 +62,8 @@ const Header: FC = () => {
             <li>
               <Link
                 to="/blog"
-                className={`border-b-2 border-transparent hover:border-black transition duration-300 ease-in-out ${
-                  pathname === "/blog" ? "active-link" : ""
+                className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
+                  pathname === "/blog" ? "text-blue-500" : ""
                 }`}
               >
                 Blog

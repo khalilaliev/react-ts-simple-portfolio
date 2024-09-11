@@ -2,7 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import About from "./pages/About";
-import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import ProjectsDetail from "./pages/ProjectsDetail";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
         <Header />
         <main className="flex-grow max-w-2xl mx-auto mt-5 pt-20 container">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectsDetail />} />
           </Routes>
         </main>
         <Footer />

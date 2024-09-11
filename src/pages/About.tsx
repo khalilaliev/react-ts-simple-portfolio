@@ -2,6 +2,8 @@ import { FC } from "react";
 import Title from "../components/Title/Title";
 import { skills } from "../data/skills";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { GrProjects } from "react-icons/gr";
 
 const About: FC = () => {
   return (
@@ -33,6 +35,14 @@ const About: FC = () => {
           and good knowledge of JavaScript, React, and TypeScript. I have the
           ability to create responsive and visually appealing web interfaces.
         </p>
+        <div className="mt-3 flex justify-center ">
+          <Link
+            to={"/projects"}
+            className="text-blue-500 flex items-center gap-2 hover:text-black transition-all duration-300"
+          >
+            Check out my projects <GrProjects />
+          </Link>
+        </div>
       </div>
       <div className="mt-9">
         <Title text="Bio" />
