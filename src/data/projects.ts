@@ -1,3 +1,5 @@
+import proshop from "../assets/proshop.png";
+import pizzaday from "../assets/pizzaday.png";
 interface IProjects {
   id: number;
   title: string;
@@ -13,7 +15,7 @@ export const projects: IProjects[] = [
     title: "Fullstack ProShop",
     description:
       "Using the MERN stack, Redux and other technologies building  real life project",
-    imageUrl: "../../src/assets/proshop.png",
+    imageUrl: proshop,
     link: "https://proshop-gu6d.onrender.com",
     gitHub: "https://github.com/khalilaliev/react-proshop",
   },
@@ -22,7 +24,7 @@ export const projects: IProjects[] = [
     title: "PizzaDay",
     description:
       "Using ReactJS, Redux and other technologies simple pizza website",
-    imageUrl: "../../src/assets/pizzaday.png",
+    imageUrl: pizzaday,
     link: "https://react-pizzaday.vercel.app",
     gitHub: "https://github.com/khalilaliev/react-pizzaday",
   },
