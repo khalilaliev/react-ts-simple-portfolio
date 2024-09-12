@@ -5,7 +5,9 @@ const Footer: FC = () => {
   return (
     <div className="container">
       <div className="py-8 flex justify-center">
-        <p>&copy; {currDate} Khalil Aliiev. All Rights Reserved.</p>
+        <p className="dark:text-dark-text">
+          &copy; {currDate} Khalil Aliiev. All Rights Reserved.
+        </p>
       </div>
     </div>
   );

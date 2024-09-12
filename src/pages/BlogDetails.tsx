@@ -23,7 +23,7 @@ const BlogDetails: FC = () => {
           {blog.activity?.map((a) => (
             <>
               <li key={a.id} className="mt-6 leading-7 text-gray-700">
-                <p className="mt-3 ">{a.label}</p>
+                <p className="mt-3 dark:text-dark-text">{a.label}</p>
                 {a.img && (
                   <img
                     src={a.img}
