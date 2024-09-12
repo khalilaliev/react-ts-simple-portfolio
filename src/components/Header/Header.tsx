@@ -34,7 +34,9 @@ const Header: FC = () => {
     <>
       <div
         className={`max-w-3xl my-0 mx-auto dark:bg-header-bg dark:text-dark-text bg-white z-50 rounded-xl shadow-xl container fixed top-0 left-0 right-0 transition-colors duration-300 ${
-          isScrolled ? "bg-opacity-80 backdrop-blur-sm" : "bg-opacity-100"
+          isScrolled
+            ? "bg-opacity-70 backdrop-blur-md dark:bg-opacity-70 dark:backdrop-blur-md"
+            : "bg-opacity-100"
         }`}
       >
         <div className="flex items-center justify-between py-4">
