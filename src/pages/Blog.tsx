@@ -17,7 +17,9 @@ const Blog: FC = () => {
                 <h2 className="text-2xl font-light tracking-wider ">
                   {blog.title}
                 </h2>
-                <p className="mt-3">{blog.description}</p>
+                <p className="mt-3 leading-7 text-gray-700">
+                  {blog.description}
+                </p>
               </Link>
             </li>
           ))}

@@ -37,24 +37,24 @@ const Header: FC = () => {
         <div className="flex items-center justify-between py-4">
           <Link
             to="/"
-            className="font-semibold flex items-center justify-between gap-2"
+            className="font-semibold flex items-center justify-between "
           >
             <FaNodeJs className="text-2xl" /> Khalil Aliiev
           </Link>
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden md:flex gap-1">
             <Link
               to="/"
-              className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
-                pathname === "/" ? "text-blue-500" : ""
+              className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-100 transition-all ease-in-out ${
+                pathname === "/" ? "text-blue-500 font-medium" : ""
               }`}
             >
               About
             </Link>
             <Link
               to="/projects"
-              className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
+              className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-100 transition-all ease-in-out ${
                 pathname === "/projects" || /^\/projects\/\d+$/.test(pathname)
-                  ? "text-blue-500"
+                  ? "text-blue-500 font-medium"
                   : ""
               }`}
             >
@@ -62,9 +62,9 @@ const Header: FC = () => {
             </Link>
             <Link
               to="/blog"
-              className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
+              className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-100 transition-all ease-in-out ${
                 pathname === "/blog" || /^\/blog\/\d+$/.test(pathname)
-                  ? "text-blue-500"
+                  ? "text-blue-500 font-medium"
                   : ""
               }`}
             >

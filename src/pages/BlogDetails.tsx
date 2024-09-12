@@ -20,19 +20,19 @@ const BlogDetails: FC = () => {
       />
       {blog.activity?.length !== 0 && (
         <ul>
-          {blog.activity?.map((a, index) => (
-            <li key={a.id} className="mt-6">
-              <p className="mt-3">
-                <strong>{index + 1}</strong>. {a.label}
-              </p>
-              {a.img && (
-                <img
-                  src={a.img}
-                  alt="TailwindCSS"
-                  className="rounded-lg mt-3"
-                />
-              )}
-            </li>
+          {blog.activity?.map((a) => (
+            <>
+              <li key={a.id} className="mt-6 leading-7 text-gray-700">
+                <p className="mt-3 ">{a.label}</p>
+                {a.img && (
+                  <img
+                    src={a.img}
+                    alt="TailwindCSS"
+                    className="rounded-lg mt-3"
+                  />
+                )}
+              </li>
+            </>
           ))}
         </ul>
       )}

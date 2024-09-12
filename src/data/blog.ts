@@ -6,6 +6,13 @@ import viteconfig from "../assets/viteconfig.png";
 import css from "../assets/css.png";
 import importcss from "../assets/importcss.png";
 import using from "../assets/using.png";
+import primitive from "../assets/primitive.png";
+import arr from "../assets/arr.png";
+import tuple from "../assets/tuple.png";
+import obj from "../assets/obj.png";
+import optional from "../assets/optional.png";
+import union from "../assets/union.png";
+import alias from "../assets/alias.png";
 
 interface IActivity {
   label: string;
@@ -101,5 +108,73 @@ export const blogs: IBlogs[] = [
     imageUrl: typescript,
     description:
       "TypeScript, a statically typed superset of JavaScript, helps developers catch errors early in the development process by providing static type checking.",
+    activity: [
+      {
+        id: 1,
+        label:
+          "Static Typing: TypeScript provides static type checking, which helps catch type-related errors at compile time rather than at runtime. This can prevent many common bugs and make the codebase more robust.",
+      },
+      {
+        id: 2,
+        label:
+          "Code Clarity: Type annotations make the code more self-documenting, which improves readability and maintainability. It becomes easier to understand the data structures and expected values.",
+      },
+      {
+        id: 3,
+        label:
+          "IntelliSense and Autocompletion: TypeScript integrates well with editors like VSCode, offering advanced autocompletion, type inference, and refactoring tools. This can speed up development and reduce the likelihood of errors.",
+      },
+      {
+        id: 4,
+        label:
+          "Error Detection: TypeScript's compile-time checking can catch potential issues before code is executed, which helps in writing reliable code and speeds up debugging.",
+      },
+      {
+        id: 5,
+        label: "Basic Variable Typing",
+      },
+      {
+        id: 6,
+        label: "Primitive Types:",
+        img: primitive,
+      },
+      {
+        id: 7,
+        label: "Arrays:",
+        img: arr,
+      },
+      {
+        id: 8,
+        label:
+          "Tuples are arrays with fixed sizes and known types for each position:",
+        img: tuple,
+      },
+      {
+        id: 9,
+        label: "Objects:",
+        img: obj,
+      },
+      {
+        id: 10,
+        label: "Optional Properties:",
+        img: optional,
+      },
+      {
+        id: 11,
+        label:
+          "Union types allow a variable to hold more than one type of value:",
+        img: union,
+      },
+      {
+        id: 12,
+        label: "Type aliases allow you to create a new name for a type:",
+        img: alias,
+      },
+      {
+        id: 13,
+        label:
+          "Summary: By explicitly typing variables, TypeScript provides type safety, which can prevent errors and improve code quality.",
+      },
+    ],
   },
 ];
