@@ -13,6 +13,7 @@ import obj from "../assets/obj.png";
 import optional from "../assets/optional.png";
 import union from "../assets/union.png";
 import alias from "../assets/alias.png";
+import front2024 from "../assets/front2024.png";
 
 interface IActivity {
   label: string;
@@ -176,5 +177,13 @@ export const blogs: IBlogs[] = [
           "Summary: By explicitly typing variables, TypeScript provides type safety, which can prevent errors and improve code quality.",
       },
     ],
+  },
+  {
+    id: 4,
+    title:
+      "Essential Skills for Frontend Developers in 2024: Trends and Technologies to Master",
+    description:
+      "Discover the key skills and trends every frontend developer should focus on in 2024. From mastering modern frameworks and web performance techniques to integrating AI and Web3 technologies, stay ahead with the latest tools and practices to build cutting-edge web applications.",
+    imageUrl: front2024,
   },
 ];
