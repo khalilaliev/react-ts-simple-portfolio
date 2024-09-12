@@ -185,5 +185,32 @@ export const blogs: IBlogs[] = [
     description:
       "Discover the key skills and trends every frontend developer should focus on in 2024. From mastering modern frameworks and web performance techniques to integrating AI and Web3 technologies, stay ahead with the latest tools and practices to build cutting-edge web applications.",
     imageUrl: front2024,
+    activity: [
+      {
+        id: 1,
+        label:
+          "Frameworks and Libraries: Keep mastering popular frameworks like React, Angular, and Vue. Also, stay updated with the latest in server-side rendering (SSR) tools such as Next.js or Nuxt.js, which continue to gain traction.",
+      },
+      {
+        id: 2,
+        label:
+          "Web Performance: Learning about performance optimization is crucial. Tools like Vite for faster builds, and Web Vitals for monitoring, are essential. Knowledge of edge computing and CDNs to reduce latency will also be valuable.",
+      },
+      {
+        id: 3,
+        label:
+          "Design Systems and Component Libraries: Understand how to create and use design systems, and leverage component libraries like Tailwind CSS or Material UI for consistent and efficient UI development.",
+      },
+      {
+        id: 4,
+        label:
+          "AI and Machine Learning Integration: Learn how to integrate AI/ML models into web applications using tools like TensorFlow.js or APIs for natural language processing and image recognition.",
+      },
+      {
+        id: 5,
+        label:
+          "3D and Augmented Reality (AR): Web graphics libraries like Three.js, and tools for AR experiences, are becoming more popular, making it useful to understand how to incorporate these elements.",
+      },
+    ],
   },
 ];
