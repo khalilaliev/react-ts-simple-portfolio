@@ -3,6 +3,9 @@ import tailwind from "../assets/tailwindcss.webp";
 import typescript from "../assets/typescript.webp";
 import npmi from "../assets/npmi.png";
 import viteconfig from "../assets/viteconfig.png";
+import css from "../assets/css.png";
+import importcss from "../assets/importcss.png";
+import using from "../assets/using.png";
 
 interface IActivity {
   label: string;
@@ -71,6 +74,24 @@ export const blogs: IBlogs[] = [
         label:
           "Update tailwind.config.js You can customize your Tailwind setup by modifying the tailwind.config.js file. Here’s a basic configuration:",
         img: viteconfig,
+      },
+      {
+        id: 3,
+        label:
+          "Create a CSS file (e.g., src/index.css or src/styles/tailwind.css) and add the Tailwind CSS directives:",
+        img: css,
+      },
+      {
+        id: 4,
+        label:
+          "Import the CSS file into your project. For example, in a React project, you would add the import statement to your index.tsx or App.tsx:",
+        img: importcss,
+      },
+      {
+        id: 5,
+        label:
+          "You can now use Tailwind's utility classes in your HTML or JSX:",
+        img: using,
       },
     ],
   },
