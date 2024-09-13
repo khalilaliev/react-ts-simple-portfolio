@@ -62,7 +62,7 @@ const About: FC = () => {
       <div className="mt-9">
         <Title text="Certifications" />
         {certificates.length !== 0 && (
-          <ul className="mt-3 flex justify-between items-center">
+          <ul className="mt-3 flex flex-wrap md:flex-nowrap justify-between items-center gap-5">
             {certificates.map((certificate) => (
               <li key={certificate.id} className="dark:text-dark-text">
                 <h2 className="text-xl font-normal">{certificate.title}</h2>
