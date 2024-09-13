@@ -5,6 +5,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { GrProjects } from "react-icons/gr";
 import logo from "../assets/logo.jpg";
+import { certificates } from "../data/certificates";
 
 const About: FC = () => {
   return (
@@ -57,6 +58,27 @@ const About: FC = () => {
           <strong className="mr-2">2023 - present</strong> Front-End Development
           at Hillel IT School.
         </p>
+      </div>
+      <div className="mt-9">
+        <Title text="Certifications" />
+        {certificates.length !== 0 && (
+          <ul className="mt-3 flex justify-between items-center">
+            {certificates.map((certificate) => (
+              <li key={certificate.id} className="dark:text-dark-text">
+                <h2 className="text-xl font-normal">{certificate.title}</h2>
+                <h3>{certificate.school}</h3>
+                <p className="text-sm">Issued: {certificate.issued}</p>
+                <a
+                  href={certificate.credential}
+                  target="_blank"
+                  className=" underline text-sm dark:hover:text-blue-500 hover:text-blue-500 transition-all duration-300"
+                >
+                  {certificate.cerId}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       <div className="mt-9">
         <Title text="Skills" />

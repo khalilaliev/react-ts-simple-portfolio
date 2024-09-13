@@ -76,17 +76,30 @@ const Header: FC = () => {
               Blog
             </Link>
           </nav>
-          <button onClick={toggleTheme}>
-            {theme === "light" ? (
-              <>
-                <MdOutlineDarkMode className="text-2xl" />
-              </>
-            ) : (
-              <>
-                <MdOutlineLightMode className="text-2xl" />
-              </>
-            )}
+          <button
+            onClick={toggleTheme}
+            className="relative overflow-hidden w-10 h-10"
+          >
+            <div
+              className={`absolute inset-0 flex items-center justify-center transition-transform duration-200 ${
+                theme === "light"
+                  ? "transform -translate-y-full opacity-0"
+                  : "transform translate-y-0 opacity-100"
+              }`}
+            >
+              <MdOutlineDarkMode className="text-2xl" />
+            </div>
+            <div
+              className={`absolute inset-0 flex items-center justify-center transition-transform duration-200 ${
+                theme === "light"
+                  ? "transform translate-y-0 opacity-100"
+                  : "transform translate-y-full opacity-0"
+              }`}
+            >
+              <MdOutlineLightMode className="text-2xl" />
+            </div>
           </button>
+
           <button
             className="text-2xl p-2 md:hidden"
             onClick={toggleMenu}
@@ -128,7 +141,9 @@ const Header: FC = () => {
                   to="/blog"
                   onClick={toggleMenu}
                   className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
-                    pathname === "/blog" ? "text-blue-500" : ""
+                    pathname === "/blog" || /^\/blog\/\d+$/.test(pathname)
+                      ? "text-blue-500"
+                      : ""
                   }`}
                 >
                   Blog
