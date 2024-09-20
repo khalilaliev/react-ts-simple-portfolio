@@ -23,7 +23,7 @@ export const projects: IProjects[] = [
     link: "https://proshop-gu6d.onrender.com",
     gitHub: "https://github.com/khalilaliev/react-proshop",
     platform: "Web",
-    stack: "ReactJS, Bootstrap, NodeJS, MongoDB",
+    stack: "MongoDB, ExpressJS, ReactJS, NodeJS",
   },
   {
     id: 2,

@@ -7,8 +7,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
 
 const Header: FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const { theme, toggleTheme } = useTheme();
   const { pathname } = useLocation();
   useEffect(() => {
