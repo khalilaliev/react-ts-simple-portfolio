@@ -16,6 +16,17 @@ interface IProjects {
 export const projects: IProjects[] = [
   {
     id: 1,
+    title: "Fullstack PropertyPulse",
+    description:
+      "Building a full-featured property rental website using Next.js",
+    imageUrl: proshop,
+    link: "https://proshop-gu6d.onrender.com",
+    gitHub: "https://github.com/khalilaliev/react-proshop",
+    platform: "Web",
+    stack: "MongoDB, ExpressJS, ReactJS, NodeJS",
+  },
+  {
+    id: 2,
     title: "Fullstack ProShop",
     description:
       "Using the MERN stack, Redux and other technologies building  real life project",
@@ -26,7 +37,7 @@ export const projects: IProjects[] = [
     stack: "MongoDB, ExpressJS, ReactJS, NodeJS",
   },
   {
-    id: 2,
+    id: 3,
     title: "PizzaDay",
     description:
       "Using ReactJS, Redux and other technologies simple pizza website",
@@ -37,7 +48,7 @@ export const projects: IProjects[] = [
     stack: "ReactJS, TailwindCSS",
   },
   {
-    id: 3,
+    id: 4,
     title: "Simple Weather",
     description: "Using just HTML/CSS and JS simple weather app",
     imageUrl: weather,
@@ -47,7 +58,7 @@ export const projects: IProjects[] = [
     stack: "HTML/CSS, TailwindCSS, JavaScript, RippleUI",
   },
   {
-    id: 4,
+    id: 5,
     title: "Todo",
     description:
       "Using ReactJS simple todo app with the ability to set priority",

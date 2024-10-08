@@ -1,6 +1,7 @@
 interface ISkills {
   id: number;
   skill: string;
+  icon?: JSX.Element;
 }
 
 export const skills: ISkills[] = [
@@ -47,5 +48,9 @@ export const skills: ISkills[] = [
   {
     id: 11,
     skill: "Mongo",
+  },
+  {
+    id: 12,
+    skill: "NextJS",
   },
 ];
