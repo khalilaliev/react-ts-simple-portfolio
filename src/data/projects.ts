@@ -2,6 +2,7 @@ import proshop from "../assets/proshop.png";
 import pizzaday from "../assets/pizzaday.png";
 import weather from "../assets/weather.png";
 import todo from "../assets/todo.png";
+import propertyPulse from "../assets/propertypulse.png";
 interface IProjects {
   id: number;
   title: string;
@@ -19,11 +20,11 @@ export const projects: IProjects[] = [
     title: "Fullstack PropertyPulse",
     description:
       "Building a full-featured property rental website using Next.js",
-    imageUrl: proshop,
-    link: "https://proshop-gu6d.onrender.com",
-    gitHub: "https://github.com/khalilaliev/react-proshop",
+    imageUrl: propertyPulse,
+    link: "https://property-pulse-nextjs-orpin.vercel.app/",
+    gitHub: "https://github.com/khalilaliev/property-pulse-nextjs",
     platform: "Web",
-    stack: "MongoDB, ExpressJS, ReactJS, NodeJS",
+    stack: "NextJS, React, TypeScript, Tailwind, MongoDB",
   },
   {
     id: 2,
