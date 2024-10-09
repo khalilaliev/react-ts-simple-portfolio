@@ -3,6 +3,7 @@ import pizzaday from "../assets/pizzaday.png";
 import weather from "../assets/weather.png";
 import todo from "../assets/todo.png";
 import propertyPulse from "../assets/propertypulse.png";
+import hillegal from "../assets/hilegal.png";
 interface IProjects {
   id: number;
   title: string;
@@ -50,21 +51,31 @@ export const projects: IProjects[] = [
   },
   {
     id: 4,
+    title: "Hillegal",
+    description: "Using HTML/CSS and JS website about law company",
+    imageUrl: hillegal,
+    link: "https://hillegal-projects.vercel.app",
+    gitHub: "https://github.com/khalilaliev/front-end-final-project",
+    platform: "Web",
+    stack: "HTML/CSS, SASS, JavaScript, Gulp",
+  },
+  {
+    id: 5,
     title: "Simple Weather",
     description: "Using just HTML/CSS and JS simple weather app",
     imageUrl: weather,
-    link: "https://khalilaliev.github.io/simple-weather-app/",
+    link: "https://khalilaliev.github.io/simple-weather-app",
     gitHub: "https://github.com/khalilaliev/simple-weather-app",
     platform: "Web",
     stack: "HTML/CSS, TailwindCSS, JavaScript, RippleUI",
   },
   {
-    id: 5,
+    id: 6,
     title: "Todo",
     description:
       "Using ReactJS simple todo app with the ability to set priority",
     imageUrl: todo,
-    link: "https://react-hw-3-one.vercel.app/",
+    link: "https://react-hw-3-one.vercel.app",
     gitHub: "https://github.com/khalilaliev/react-hw-3",
     platform: "Web",
     stack: "ReactJS, TailwindCSS,",
