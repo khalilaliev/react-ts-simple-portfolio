@@ -16,6 +16,9 @@ export default {
       // height: {
       //   '80vh-screen': '80vh'
       // },
+      width: {
+        certificate: "170px",
+      },
       container: {
         center: true,
         padding: "2rem",

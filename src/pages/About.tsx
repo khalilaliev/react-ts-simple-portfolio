@@ -62,16 +62,19 @@ const About: FC = () => {
       <div className="mt-9">
         <Title text="Certifications" />
         {certificates.length !== 0 && (
-          <ul className="mt-3 flex flex-wrap md:flex-nowrap justify-between items-center gap-5">
+          <ul className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-5 justify-items-center md:justify-items-start">
             {certificates.map((certificate) => (
-              <li key={certificate.id} className="dark:text-dark-text">
+              <li
+                key={certificate.id}
+                className="dark:text-dark-text w-certificate"
+              >
                 <h2 className="text-xl font-normal">{certificate.title}</h2>
                 <h3>{certificate.school}</h3>
                 <p className="text-sm">Issued: {certificate.issued}</p>
                 <a
                   href={certificate.credential}
                   target="_blank"
-                  className=" underline text-sm dark:hover:text-blue-500 hover:text-blue-500 transition-all duration-300"
+                  className="underline text-sm dark:hover:text-blue-500 hover:text-blue-500 transition-all duration-300"
                 >
                   {certificate.cerId}
                 </a>
@@ -80,6 +83,7 @@ const About: FC = () => {
           </ul>
         )}
       </div>
+
       <div className="mt-9">
         <Title text="Skills" />
         <ul className="mt-3 flex justify-between flex-wrap gap-5">

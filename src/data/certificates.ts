@@ -40,4 +40,12 @@ export const certificates: ICertificates[] = [
     credential: "https://certificate.ithillel.ua/view/94365887",
     cerId: 94365887,
   },
+  {
+    id: 5,
+    title: "TypeScript",
+    school: "Hillel IT School",
+    issued: "Oct 2024",
+    credential: "https://certificate.ithillel.ua/view/25754293",
+    cerId: 25754293,
+  },
 ];
