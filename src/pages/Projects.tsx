@@ -12,7 +12,7 @@ const Projects: FC = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="flex flex-col dark:bg-dark-bg bg-white shadow-lg dark:shadow-header-bg rounded-lg overflow-hidden w-full hover:-translate-y-1 duration-300 transition-all"
+            className="flex flex-col dark:bg-dark-bg bg-white hover:shadow-lg dark:shadow-header-bg rounded-lg overflow-hidden w-full hover:-translate-y-1 duration-300 transition-all"
           >
             <div className="flex-shrink-0">
               <img
