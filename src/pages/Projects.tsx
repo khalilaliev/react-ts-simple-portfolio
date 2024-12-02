@@ -28,7 +28,7 @@ const Projects: FC = () => {
               </p>
               <Link
                 to={`/projects/${project.id}`}
-                className="mt-auto text-blue-500 hover:underline"
+                className="mt-auto text-blue-500 dark:hover:text-dark-text hover:text-black transition-all duration-300"
               >
                 See the project
               </Link>

@@ -58,6 +58,10 @@ const About: FC = () => {
           <strong className="mr-2">2023 - present</strong> Front-End Development
           at Hillel IT School.
         </p>
+        <p className="mt-2 dark:text-dark-text">
+          <strong className="mr-2">2024 - present</strong> Front-End Developer
+          at Toweb.
+        </p>
       </div>
       <div className="mt-9">
         <Title text="Certifications" />
