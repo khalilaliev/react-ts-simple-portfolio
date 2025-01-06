@@ -53,4 +53,12 @@ export const skills: ISkills[] = [
     id: 12,
     skill: "NextJS",
   },
+  {
+    id: 13,
+    skill: "WordPress",
+  },
+  {
+    id: 14,
+    skill: "PHP",
+  },
 ];
