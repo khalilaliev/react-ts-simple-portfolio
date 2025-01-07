@@ -4,6 +4,7 @@ import weather from "../assets/weather.png";
 import todo from "../assets/todo.png";
 import propertyPulse from "../assets/propertypulse.png";
 import hillegal from "../assets/hilegal.png";
+import bridgecorner from "../assets/bridgecorner.png";
 interface IProjects {
   id: number;
   title: string;
@@ -29,6 +30,17 @@ export const projects: IProjects[] = [
   },
   {
     id: 2,
+    title: "BridgeCorner",
+    description:
+      "Using PHP Wordpress with building a full-featured fullstack project",
+    imageUrl: bridgecorner,
+    link: "https://bridgecorner.odin.toweb.swiss/",
+    // gitHub: "https://github.com/khalilaliev/react-proshop",
+    platform: "Web",
+    stack: "Wordpress, PHP",
+  },
+  {
+    id: 3,
     title: "Fullstack ProShop",
     description:
       "Using the MERN stack, Redux and other technologies building  real life project",
@@ -39,7 +51,7 @@ export const projects: IProjects[] = [
     stack: "MongoDB, ExpressJS, ReactJS, NodeJS",
   },
   {
-    id: 3,
+    id: 4,
     title: "PizzaDay",
     description:
       "Using ReactJS, Redux and other technologies simple pizza website",
@@ -50,7 +62,7 @@ export const projects: IProjects[] = [
     stack: "ReactJS, TailwindCSS",
   },
   {
-    id: 4,
+    id: 5,
     title: "Hillegal",
     description: "Using HTML/CSS and JS website about law company",
     imageUrl: hillegal,
@@ -60,7 +72,7 @@ export const projects: IProjects[] = [
     stack: "HTML/CSS, SASS, JavaScript, Gulp",
   },
   {
-    id: 5,
+    id: 6,
     title: "Simple Weather",
     description: "Using just HTML/CSS and JS simple weather app",
     imageUrl: weather,
@@ -70,7 +82,7 @@ export const projects: IProjects[] = [
     stack: "HTML/CSS, TailwindCSS, JavaScript, RippleUI",
   },
   {
-    id: 6,
+    id: 7,
     title: "Todo",
     description:
       "Using ReactJS simple todo app with the ability to set priority",

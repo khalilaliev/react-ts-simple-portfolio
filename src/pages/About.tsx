@@ -9,7 +9,7 @@ import { certificates } from "../data/certificates";
 
 const About: FC = () => {
   return (
-    <div className="max-w-2xl my-0 mx-auto">
+    <div className="my-0 mx-auto">
       <div className="px-8 py-6 dark:bg-secondary-bg dark:text-dark-text bg-bg-custom rounded-xl flex justify-center">
         <p>
           Hello I'm Khalil Aliiev. I'm a Front-End Developer based on Zürich!

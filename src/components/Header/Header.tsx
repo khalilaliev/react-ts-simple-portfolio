@@ -33,9 +33,9 @@ const Header: FC = () => {
   return (
     <>
       <div
-        className={`max-w-3xl my-0 mx-auto dark:bg-header-bg dark:text-dark-text bg-white z-50 rounded-xl shadow-xl dark:shadow-md container fixed top-0 left-0 right-0 transition-colors duration-300 ${
+        className={`max-w-8xl  my-0 mx-auto dark:bg-header-bg dark:text-dark-text bg-white shadow-lg z-50 rounded-xl  dark:shadow-md container fixed top-0 left-0 right-0 transition-colors duration-300 ${
           isScrolled
-            ? "bg-opacity-70 backdrop-blur-md dark:bg-opacity-70 dark:backdrop-blur-md"
+            ? "bg-opacity-55 backdrop-blur-md dark:bg-opacity-70 dark:backdrop-blur-lg"
             : "bg-opacity-100"
         }`}
       >
