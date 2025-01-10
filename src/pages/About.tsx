@@ -64,8 +64,15 @@ const About: FC = () => {
             Development at Hillel IT School.
           </p>
           <p className="mt-2 dark:text-dark-text">
-            <strong className="mr-2">2024 - present</strong> Front-End Developer
-            at Toweb.
+            <strong className="mr-2">2024 - present</strong> Front-End /
+            Wordpress Developer at{" "}
+            <a
+              className="text-blue-400 dark:hover:text-blue-600 hover:text-blue-600 transition-all duration-300"
+              href="https://toweb.ch/"
+              target="_blank"
+            >
+              Toweb GmbH
+            </a>
           </p>
         </div>
         <div className="mt-9">

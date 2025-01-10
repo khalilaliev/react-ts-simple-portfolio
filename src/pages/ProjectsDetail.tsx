@@ -38,23 +38,29 @@ const ProjectsDetail: FC = () => {
               {project.description}
             </h1>
           </div>
-          <div className="flex items-center gap-2 mt-5">
-            <span className="bg-blue-200 dark:bg-hover-bg py-1 px-2 rounded-xl text-sm text-blue-700 font-medium">
+          <div className="flex items-center gap-5 mt-5">
+            <span className="bg-blue-200 dark:bg-hover-bg max-sm:text-center max-sm:flex-1 py-1 px-2 rounded-xl text-sm text-blue-700 font-medium">
               Platform
             </span>
-            <p className="font-light dark:text-dark-text">{project.platform}</p>
+            <p className="font-light dark:text-dark-text max-sm:flex-1">
+              {project.platform}
+            </p>
           </div>
-          <div className="flex items-center gap-2 mt-5">
-            <span className="bg-blue-200 dark:bg-hover-bg py-1 px-2 rounded-xl text-sm text-blue-700 font-medium">
+          <div className="flex items-center gap-5 mt-5">
+            <span className="bg-blue-200 dark:bg-hover-bg max-sm:text-center max-sm:flex-1 py-1 px-2 rounded-xl text-sm text-blue-700 font-medium">
               Technologies
             </span>
-            <p className="font-light dark:text-dark-text">{project.stack}</p>
+            <p className="font-light dark:text-dark-text max-sm:flex-1">
+              {project.stack}
+            </p>
           </div>
-          <div className="flex items-center gap-2 mt-5">
-            <span className="bg-blue-200 dark:bg-hover-bg py-1 px-2 rounded-xl text-sm text-blue-700 font-medium">
+          <div className="flex items-center gap-5 mt-5 max-sm:flex-1">
+            <span className="bg-blue-200 dark:bg-hover-bg py-1 max-sm:text-center max-sm:flex-1 px-2 rounded-xl text-sm text-blue-700 font-medium">
               Language
             </span>
-            <p className="font-light dark:text-dark-text">{project.language}</p>
+            <p className="font-light dark:text-dark-text max-sm:flex-1">
+              {project.language}
+            </p>
           </div>
           <div className="mt-5 text-left">
             <a
