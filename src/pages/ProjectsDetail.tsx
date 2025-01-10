@@ -46,7 +46,7 @@ const ProjectsDetail: FC = () => {
         </div>
         <div className="mt-5 text-left">
           <a
-            className="text-blue-500 dark:text-blue-700 text-lg flex justify-start max-w-36 items-center gap-2 dark:hover:bg-hover-bg hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all"
+            className="text-blue-500 dark:text-blue-700 text-lg flex justify-start max-w-36 items-center gap-2 dark:hover:bg-hover-bg hover:bg-blue-200 rounded-2xl p-2 duration-300 transition-all"
             href={project.link}
             target="_blank"
           >
@@ -56,7 +56,7 @@ const ProjectsDetail: FC = () => {
         {project.gitHub && (
           <div className="mt-2 text-left">
             <a
-              className="text-blue-500 dark:text-blue-700 text-lg flex justify-start max-w-36 items-center gap-2 dark:hover:bg-hover-bg hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all"
+              className="text-blue-500 dark:text-blue-700 text-lg flex justify-start max-w-36 items-center gap-2 dark:hover:bg-hover-bg hover:bg-blue-200 rounded-2xl p-2 duration-300 transition-all"
               href={project.gitHub}
               target="_blank"
             >

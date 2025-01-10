@@ -42,7 +42,7 @@ const About: FC = () => {
         <div className="mt-3 flex justify-center ">
           <Link
             to={"/projects"}
-            className="text-blue-500 flex items-center gap-2 dark:hover:text-dark-text hover:text-black transition-all duration-300"
+            className="text-blue-400 flex items-center gap-2 dark:hover:text-blue-700 dark:hover:bg-hover-bg hover:bg-blue-100 px-2 py-1 hover:text-blue-500 rounded-2xl transition-all duration-300"
           >
             Check out my projects <GrProjects />
           </Link>
@@ -92,9 +92,18 @@ const About: FC = () => {
         <Title text="Skills" />
         <ul className="mt-3 flex justify-between flex-wrap gap-5">
           {skills.map((skill) => (
-            <li key={skill.id} className="text-lg dark:text-dark-text">
-              {skill.skill}
-            </li>
+            <a
+              href={skill.links}
+              target="_blank"
+              className="hover:bg-blue-100 hover:text-blue-500 dark:text-dark-text dark:hover:text-blue-700 rounded-2xl transition-all duration-300 dark:hover:bg-hover-bg"
+            >
+              <li
+                key={skill.id}
+                className="text-lg  cursor-pointer py-1 px-2   text-center flex items-center justify-center w-32 h-10"
+              >
+                {skill.skill}
+              </li>
+            </a>
           ))}
         </ul>
       </div>
