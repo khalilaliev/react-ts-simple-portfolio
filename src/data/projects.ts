@@ -14,6 +14,7 @@ interface IProjects {
   gitHub?: string;
   stack?: string;
   platform?: string;
+  language: string;
 }
 
 export const projects: IProjects[] = [
@@ -27,6 +28,7 @@ export const projects: IProjects[] = [
     gitHub: "https://github.com/khalilaliev/property-pulse-nextjs",
     platform: "Web",
     stack: "NextJS, React, TypeScript, Tailwind, MongoDB",
+    language: "English",
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ export const projects: IProjects[] = [
     // gitHub: "https://github.com/khalilaliev/react-proshop",
     platform: "Web",
     stack: "Wordpress, PHP",
+    language: "German",
   },
   {
     id: 3,
@@ -49,6 +52,7 @@ export const projects: IProjects[] = [
     gitHub: "https://github.com/khalilaliev/react-proshop",
     platform: "Web",
     stack: "MongoDB, ExpressJS, ReactJS, NodeJS",
+    language: "English",
   },
   {
     id: 4,
@@ -60,6 +64,7 @@ export const projects: IProjects[] = [
     gitHub: "https://github.com/khalilaliev/react-pizzaday",
     platform: "Web",
     stack: "ReactJS, TailwindCSS",
+    language: "English",
   },
   {
     id: 5,
@@ -70,6 +75,7 @@ export const projects: IProjects[] = [
     gitHub: "https://github.com/khalilaliev/front-end-final-project",
     platform: "Web",
     stack: "HTML/CSS, SASS, JavaScript, Gulp",
+    language: "English",
   },
   {
     id: 6,
@@ -80,6 +86,7 @@ export const projects: IProjects[] = [
     gitHub: "https://github.com/khalilaliev/simple-weather-app",
     platform: "Web",
     stack: "HTML/CSS, TailwindCSS, JavaScript, RippleUI",
+    language: "English",
   },
   {
     id: 7,
@@ -91,5 +98,6 @@ export const projects: IProjects[] = [
     gitHub: "https://github.com/khalilaliev/react-hw-3",
     platform: "Web",
     stack: "ReactJS, TailwindCSS,",
+    language: "English",
   },
 ];

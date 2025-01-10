@@ -1,10 +1,14 @@
 import { FC } from "react";
 import { blogs } from "../data/blog";
 import { Link } from "react-router-dom";
+import { useFadeIn } from "../hooks/useFadeIn";
+import { motion } from "framer-motion";
 
 const Blog: FC = () => {
+  const { animationProps } = useFadeIn({ delay: 0 });
+
   return (
-    <>
+    <motion.div {...animationProps}>
       <h1 className="text-4xl dark:text-dark-text font-bold mt-5">My Blog</h1>
       {blogs.length !== 0 && (
         <ul>
@@ -25,7 +29,7 @@ const Blog: FC = () => {
           ))}
         </ul>
       )}
-    </>
+    </motion.div>
   );
 };
 

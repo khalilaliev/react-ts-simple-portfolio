@@ -1,18 +1,19 @@
 import { FC } from "react";
 import { blogs } from "../data/blog";
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useFadeIn } from "../hooks/useFadeIn";
 
 const BlogDetails: FC = () => {
   const { id } = useParams<{ id: string }>();
   const blog = blogs.find((p) => p.id === Number(id));
-
-  console.log(blog);
+  const { animationProps } = useFadeIn({ delay: 0 });
 
   if (!blog) {
     return <div>Blog not Found!</div>;
   }
   return (
-    <>
+    <motion.div {...animationProps}>
       <img
         src={blog.imageUrl}
         alt={blog.title}
@@ -36,7 +37,7 @@ const BlogDetails: FC = () => {
           ))}
         </ul>
       )}
-    </>
+    </motion.div>
   );
 };
 
