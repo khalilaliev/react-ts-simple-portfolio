@@ -5,6 +5,7 @@ import { FaEye, FaGithub } from "react-icons/fa";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useFadeIn } from "../hooks/useFadeIn";
+import BackButton from "../components/Button/Button";
 
 const ProjectsDetail: FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -17,6 +18,7 @@ const ProjectsDetail: FC = () => {
 
   return (
     <motion.div {...animationProps}>
+      <BackButton source="/projects" text="Back to projects" />
       <div className="flex flex-col dark:bg-dark-bg bg-white shadow-lg dark:shadow-header-bg rounded-lg overflow-hidden w-full  duration-300 transition-all">
         <div className="flex-shrink-0">
           <img
@@ -29,7 +31,7 @@ const ProjectsDetail: FC = () => {
           <div className="mt-5 flex justify-between items-center gap-9">
             <Link
               to={"/projects"}
-              className="text-2xl flex gap-2 items-center text-blue-500 dark:hover:text-dark-text hover:text-black duration-300 transition-all"
+              className="text-2xl flex gap-2 items-center dark:text-blue-600 text-blue-500 dark:hover:text-dark-text hover:text-black duration-300 transition-all"
             >
               Projects{" "}
               <FaArrowUpRightFromSquare className="text-base mt-1 font-light" />

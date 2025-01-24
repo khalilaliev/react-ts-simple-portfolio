@@ -3,6 +3,7 @@ import { blogs } from "../data/blog";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useFadeIn } from "../hooks/useFadeIn";
+import BackButton from "../components/Button/Button";
 
 const BlogDetails: FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -14,6 +15,7 @@ const BlogDetails: FC = () => {
   }
   return (
     <motion.div {...animationProps}>
+      <BackButton source="/blog" text="Back to blogs" />
       <img
         src={blog.imageUrl}
         alt={blog.title}
