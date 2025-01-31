@@ -3,19 +3,20 @@ import { blogs } from "../data/blog";
 import { Link } from "react-router-dom";
 import { useFadeIn } from "../hooks/useFadeIn";
 import { motion } from "framer-motion";
+import Heading from "../components/Heading/Heading";
 
 const Blog: FC = () => {
   const { animationProps } = useFadeIn({ delay: 0 });
 
   return (
     <motion.div {...animationProps}>
-      <h1 className="text-4xl dark:text-dark-text font-bold mt-5">My Blog</h1>
+      <Heading text="My Blog" />
       {blogs.length !== 0 && (
         <ul>
-          {blogs.map((blog) => (
+          {blogs.map((blog, index) => (
             <li
               key={blog.id}
-              className="bg-white rounded-xl dark:bg-dark-bg dark:shadow-header-bg hover:shadow-lg  dark:text-dark-text p-3 mt-5 hover:-translate-y-1 duration-300 transition-all"
+              className="bg-white rounded-xl relative dark:bg-dark-bg dark:shadow-header-bg hover:shadow-lg  dark:text-dark-text p-3  hover:-translate-y-1 duration-300 transition-all"
             >
               <Link key={blog.id} to={`/blog/${blog.id}`}>
                 <h2 className="text-2xl font-light tracking-wider dark:text-dark-text">
@@ -25,6 +26,11 @@ const Blog: FC = () => {
                   {blog.description}
                 </p>
               </Link>
+              {index === 0 && (
+                <span className="dark:bg-blue-700 bg-blue-500 text-xs text-white rounded-xl py-1 px-2 absolute right-0 top-0">
+                  New
+                </span>
+              )}
             </li>
           ))}
         </ul>

@@ -3,6 +3,7 @@ import { projects } from "../data/projects";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useFadeIn } from "../hooks/useFadeIn";
+import Heading from "../components/Heading/Heading";
 
 const Projects: FC = () => {
   const { animationProps } = useFadeIn({ delay: 0 });
@@ -10,9 +11,7 @@ const Projects: FC = () => {
   return (
     <motion.div {...animationProps}>
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold mb-8 dark:text-dark-text">
-          My Projects
-        </h1>
+        <Heading text="My Projects" />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div

@@ -109,7 +109,7 @@ const Header: FC = () => {
           </button>
         </div>
         {isOpen && (
-          <nav className="md:hidden absolute top-17 right-0 w-40 bg-white dark:bg-dark-bg shadow-md rounded-md p-4">
+          <nav className="md:hidden absolute top-17 right-0 w-40 bg-white dark:bg-dark-bg shadow-md rounded-md p-4 transition-all dura">
             <ul className="flex flex-col space-y-4">
               <li>
                 <Link
