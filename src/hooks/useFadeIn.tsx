@@ -9,7 +9,7 @@ type UseFadeInOptions = {
 
 export const useFadeIn = ({
   delay = 0,
-  duration = 0.5,
+  duration = 0.7,
 }: UseFadeInOptions = {}) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 

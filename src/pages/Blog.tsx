@@ -16,7 +16,7 @@ const Blog: FC = () => {
           {blogs.map((blog, index) => (
             <li
               key={blog.id}
-              className="bg-white rounded-xl relative dark:bg-dark-bg dark:shadow-header-bg hover:shadow-lg  dark:text-dark-text p-3  hover:-translate-y-1 duration-300 transition-all"
+              className="bg-white mb-5 rounded-xl relative dark:bg-dark-bg dark:shadow-header-bg hover:shadow-lg  dark:text-dark-text p-3  hover:-translate-y-1 duration-300 transition-all"
             >
               <Link key={blog.id} to={`/blog/${blog.id}`}>
                 <h2 className="text-2xl font-light tracking-wider dark:text-dark-text">

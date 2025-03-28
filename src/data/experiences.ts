@@ -12,7 +12,7 @@ export const experiences: IExperiences[] = [
   },
   {
     id: 2,
-    year: "2023 - present",
+    year: "2023 - 2025",
     experience: " Front-End Development at Hillel IT School.",
   },
   {
