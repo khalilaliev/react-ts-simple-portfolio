@@ -63,7 +63,7 @@ const Contact = () => {
         )}
 
         <form onSubmit={onSubmit}>
-          <div className="max-w-2xl dark:bg-dark-bg dark:shadow-header-bg bg-white rounded-xl shadow-md py-10 px-5 flex flex-col">
+          <div className="max-w-2xl dark:bg-dark-bg dark:shadow-header-bg bg-white rounded-xl shadow-lg py-10 px-5 flex flex-col">
             <div className="mb-5 flex flex-col">
               <label className="mb-3 dark:text-white"> Full name: </label>
               <input
