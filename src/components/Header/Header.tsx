@@ -78,9 +78,7 @@ const Header: FC = () => {
             <Link
               to="/contact"
               className={`font-light border-b-2 border-transparent dark:hover:text-blue-700 hover:bg-blue-200 dark:hover:bg-hover-bg rounded-lg p-2 transition-all duration-300 ease-in-out ${
-                pathname === "/contact" || /^\/blog\/\d+$/.test(pathname)
-                  ? "text-blue-500 font-medium"
-                  : ""
+                pathname === "/contact" ? "text-blue-500 font-medium" : ""
               }`}
             >
               Contact
@@ -162,10 +160,9 @@ const Header: FC = () => {
               <li>
                 <Link
                   to="/contact"
+                  onClick={toggleMenu}
                   className={`font-light border-b-2 border-transparent dark:hover:text-blue-700 hover:bg-blue-200 dark:hover:bg-hover-bg rounded-lg p-2 transition-all duration-300 ease-in-out ${
-                    pathname === "/contact" || /^\/blog\/\d+$/.test(pathname)
-                      ? "text-blue-500 font-medium"
-                      : ""
+                    pathname === "/contact" ? "text-blue-500 font-medium" : ""
                   }`}
                 >
                   Contact
