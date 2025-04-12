@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Map, { ViewStateChangeEvent, MapRef } from "react-map-gl";
 import { useTheme } from "../../context/ThemeContext";
 import { FiNavigation } from "react-icons/fi";
+import { flyToCoordinates } from "../../utils/flyToCoordinates";
 
 const MapBox: React.FC = () => {
   const { theme } = useTheme();
@@ -12,7 +13,7 @@ const MapBox: React.FC = () => {
   const [viewport, setViewport] = useState({
     latitude: 0,
     longitude: 0,
-    zoom: 2,
+    zoom: 1,
     bearing: 0,
     pitch: 0,
   });
@@ -26,22 +27,12 @@ const MapBox: React.FC = () => {
     }
 
     const timeout = setTimeout(() => {
-      flyToCoordinates([8.7241, 47.498], 12);
+      flyToCoordinates([8.7241, 47.498], 12, 5000, mapRef);
+      // flyToCoordinates([8.7241, 47.498], 12, 5000);
     }, 100);
 
     return () => clearTimeout(timeout);
   }, [theme]);
-
-  const flyToCoordinates = (coordinates: [number, number], zoom: number) => {
-    if (mapRef.current) {
-      mapRef.current.flyTo({
-        center: coordinates,
-        zoom: zoom,
-        essential: true,
-        duration: 5000,
-      });
-    }
-  };
 
   return (
     <div>
@@ -57,8 +48,8 @@ const MapBox: React.FC = () => {
         onMove={(evt: ViewStateChangeEvent) => setViewport(evt.viewState)}
       />
       <button
-        onClick={() => flyToCoordinates([8.7241, 47.498], 12)}
-        className="absolute dark:bg-[#f7f7f7] bottom-20 left-10 bg-[#272525] px-4 py-2 rounded-lg transition-all duration-300 hover:border-gray-500 cursor-pointer shadow-lg"
+        onClick={() => flyToCoordinates([8.7241, 47.498], 12, 3000, mapRef)}
+        className="absolute max-md:bottom-8 max-md:left-8 dark:bg-[#f7f7f7] bottom-20 left-10 bg-[#272525] px-4 py-2 rounded-lg transition-all duration-300 hover:border-gray-500 cursor-pointer shadow-lg"
       >
         {theme === "dark" ? (
           <FiNavigation className="text-2xl" />

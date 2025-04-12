@@ -8,6 +8,7 @@ import Skills from "../components/Skills/Skills.tsx";
 import OnTheWeb from "../components/OnTheWeb/OnTheWeb.tsx";
 import Languages from "../components/Languages/Languages.tsx";
 import Heading from "../components/Heading/Heading.tsx";
+import Hero from "../components/Hero/Hero.tsx";
 
 const About: FC = () => {
   const { animationProps } = useFadeIn({ delay: 0 });
@@ -15,6 +16,7 @@ const About: FC = () => {
   return (
     <div className="my-0 mx-auto">
       <motion.div {...animationProps}>
+        <Hero />
         <Heading text="About" />
         <Work />
         <Bio />
