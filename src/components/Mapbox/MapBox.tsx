@@ -28,8 +28,7 @@ const MapBox: React.FC = () => {
 
     const timeout = setTimeout(() => {
       flyToCoordinates([8.7241, 47.498], 12, 5000, mapRef);
-      // flyToCoordinates([8.7241, 47.498], 12, 5000);
-    }, 100);
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, [theme]);
