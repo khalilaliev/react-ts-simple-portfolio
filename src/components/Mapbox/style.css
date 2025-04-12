@@ -1,0 +1,6 @@
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+  display: none !important;
+}
+div[mapboxgl-children] {
+  display: none !important;
+}

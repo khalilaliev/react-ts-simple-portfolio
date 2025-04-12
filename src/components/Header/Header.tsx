@@ -5,6 +5,7 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
+import { NAVBAR_ITEMS } from "../../constants/navbarItems";
 
 const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -47,42 +48,22 @@ const Header: FC = () => {
             <FaNodeJs className="text-3xl mr-1" /> Khalil Aliiev
           </Link>
           <nav className="hidden md:flex gap-1">
-            <Link
-              to="/"
-              className={`font-light border-b-2 border-transparent dark:hover:text-blue-700 hover:bg-blue-200 dark:hover:bg-hover-bg rounded-lg p-2 transition-all duration-300 ease-in-out ${
-                pathname === "/" ? "text-blue-500 font-medium" : ""
-              }`}
-            >
-              About
-            </Link>
-            <Link
-              to="/projects"
-              className={`font-light border-b-2 border-transparent dark:hover:text-blue-700 hover:bg-blue-200 dark:hover:bg-hover-bg rounded-lg p-2 transition-all duration-300 ease-in-out ${
-                pathname === "/projects" || /^\/projects\/\d+$/.test(pathname)
-                  ? "text-blue-500 font-medium"
-                  : ""
-              }`}
-            >
-              Projects
-            </Link>
-            <Link
-              to="/blog"
-              className={`font-light border-b-2 border-transparent dark:hover:text-blue-700 hover:bg-blue-200 dark:hover:bg-hover-bg rounded-lg p-2 transition-all duration-300 ease-in-out ${
-                pathname === "/blog" || /^\/blog\/\d+$/.test(pathname)
-                  ? "text-blue-500 font-medium"
-                  : ""
-              }`}
-            >
-              Blog
-            </Link>
-            <Link
-              to="/contact"
-              className={`font-light border-b-2 border-transparent dark:hover:text-blue-700 hover:bg-blue-200 dark:hover:bg-hover-bg rounded-lg p-2 transition-all duration-300 ease-in-out ${
-                pathname === "/contact" ? "text-blue-500 font-medium" : ""
-              }`}
-            >
-              Contact
-            </Link>
+            {NAVBAR_ITEMS.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`font-light border-b-2 border-transparent dark:hover:text-blue-700 hover:bg-blue-200 dark:hover:bg-hover-bg rounded-lg p-2 transition-all duration-300 ease-in-out ${
+                  pathname === item.path
+                    ? "text-blue-500 font-medium"
+                    : /^\/projects\/\d+$/.test(item.path) ||
+                      /^\/blog\/\d+$/.test(item.path)
+                    ? "text-blue-500"
+                    : ""
+                }`}
+              >
+                {item.title}
+              </Link>
+            ))}
           </nav>
           <button
             onClick={toggleTheme}
@@ -117,58 +98,21 @@ const Header: FC = () => {
           </button>
         </div>
         {isOpen && (
-          <nav className="md:hidden absolute top-17 right-0 w-40 bg-white dark:bg-dark-bg shadow-md rounded-md p-4 transition-all dura">
-            <ul className="flex flex-col space-y-4">
-              <li>
-                <Link
-                  to="/"
-                  onClick={toggleMenu}
-                  className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
-                    pathname === "/" ? "text-blue-500" : ""
-                  }`}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/projects"
-                  onClick={toggleMenu}
-                  className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
-                    pathname === "/projects" ||
-                    /^\/projects\/\d+$/.test(pathname)
-                      ? "text-blue-500"
-                      : ""
-                  }`}
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog"
-                  onClick={toggleMenu}
-                  className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
-                    pathname === "/blog" || /^\/blog\/\d+$/.test(pathname)
-                      ? "text-blue-500"
-                      : ""
-                  }`}
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  onClick={toggleMenu}
-                  className={`font-light border-b-2 border-transparent dark:hover:text-blue-700 hover:bg-blue-200 dark:hover:bg-hover-bg rounded-lg p-2 transition-all duration-300 ease-in-out ${
-                    pathname === "/contact" ? "text-blue-500 font-medium" : ""
-                  }`}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+          <nav className="md:hidden absolute flex flex-col space-y-4 top-17 right-0 w-40 bg-white dark:bg-dark-bg shadow-md rounded-md p-4 transition-all dura">
+            {NAVBAR_ITEMS.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={toggleMenu}
+                className={`font-light border-b-2 border-transparent hover:bg-blue-200 rounded-lg p-2 duration-300 transition-all ${
+                  pathname === item.path || /^\/projects\/\d+$/.test(pathname)
+                    ? "text-blue-500"
+                    : ""
+                }`}
+              >
+                {item.title}
+              </Link>
+            ))}
           </nav>
         )}
       </div>
