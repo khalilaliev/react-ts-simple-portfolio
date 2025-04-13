@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useFadeIn } from "../hooks/useFadeIn";
 import Heading from "../components/Heading/Heading";
 import Button from "../components/Button/Button";
-import DynamicTitle from "../components/DynanicTitle/DynanicTitle";
+import DynamicTitle from "../components/DynamicTitle/DynamicTitle";
 
 const Projects: FC = () => {
   const { animationProps } = useFadeIn({ delay: 0 });

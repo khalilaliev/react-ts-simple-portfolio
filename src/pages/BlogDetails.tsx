@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useFadeIn } from "../hooks/useFadeIn";
 import BackButton from "../components/Button/BackButton";
-import DynamicTitle from "../components/DynanicTitle/DynanicTitle";
+import DynamicTitle from "../components/DynamicTitle/DynamicTitle";
 
 const BlogDetails: FC = () => {
   const { id } = useParams<{ id: string }>();

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useFadeIn } from "../hooks/useFadeIn";
 import Heading from "../components/Heading/Heading";
 import { useState } from "react";
-import DynamicTitle from "../components/DynanicTitle/DynanicTitle";
+import DynamicTitle from "../components/DynamicTitle/DynamicTitle";
 const Contact = () => {
   console.log("Access Key:", import.meta.env.VITE_ACCESS_KEY);
 

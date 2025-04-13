@@ -8,7 +8,7 @@ import Skills from "../components/Skills/Skills.tsx";
 import OnTheWeb from "../components/OnTheWeb/OnTheWeb.tsx";
 import Languages from "../components/Languages/Languages.tsx";
 import Hero from "../components/Hero/Hero.tsx";
-import DynamicTitle from "../components/DynanicTitle/DynanicTitle.tsx";
+import DynamicTitle from "../components/DynamicTitle/DynamicTitle.tsx";
 
 const About: FC = () => {
   const { animationProps } = useFadeIn({ delay: 0 });

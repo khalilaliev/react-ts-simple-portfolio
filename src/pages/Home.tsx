@@ -1,5 +1,5 @@
 import MapBox from "../components/Mapbox/MapBox";
-import DynamicTitle from "../components/DynanicTitle/DynanicTitle";
+import DynamicTitle from "../components/DynamicTitle/DynamicTitle";
 
 const Home: React.FC = () => {
   return (
