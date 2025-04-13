@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useFadeIn } from "../hooks/useFadeIn";
 import Heading from "../components/Heading/Heading";
 import { useState } from "react";
+import DynamicTitle from "../components/DynanicTitle/DynanicTitle";
 const Contact = () => {
   console.log("Access Key:", import.meta.env.VITE_ACCESS_KEY);
 
@@ -47,6 +48,7 @@ const Contact = () => {
 
   return (
     <motion.div {...animationProps}>
+      <DynamicTitle title="Portfolio | Contact" />
       <Heading text="Contact" />
       <section>
         {result.message && (
@@ -63,7 +65,7 @@ const Contact = () => {
         )}
 
         <form onSubmit={onSubmit}>
-          <div className="max-w-2xl dark:bg-dark-bg dark:shadow-header-bg bg-white rounded-xl shadow-lg py-10 px-5 flex flex-col">
+          <div className="w-full dark:bg-dark-bg dark:shadow-header-bg bg-white rounded-xl shadow-lg py-10 px-5 flex flex-col">
             <div className="mb-5 flex flex-col">
               <label className="mb-3 dark:text-white"> Full name: </label>
               <input

@@ -5,7 +5,8 @@ import { FaEye, FaGithub } from "react-icons/fa";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useFadeIn } from "../hooks/useFadeIn";
-import BackButton from "../components/Button/Button";
+import BackButton from "../components/Button/BackButton";
+import DynamicTitle from "../components/DynanicTitle/DynanicTitle";
 
 const ProjectsDetail: FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,13 +19,14 @@ const ProjectsDetail: FC = () => {
 
   return (
     <motion.div {...animationProps}>
+      <DynamicTitle title={`Portfolio | Project ${id}`} />
       <BackButton source="/projects" text="Back to projects" />
-      <div className="flex flex-col dark:bg-dark-bg bg-white shadow-lg dark:shadow-header-bg rounded-lg overflow-hidden w-full  duration-300 transition-all">
+      <div className="flex flex-col dark:bg-dark-bg bg-white shadow-lg dark:shadow-header-bg rounded-xl overflow-hidden w-full  duration-300 transition-all">
         <div className="flex-shrink-0">
           <img
             src={project.imageUrl}
             alt={project.title}
-            className="rounded-t-xl"
+            className="rounded-xl"
           />
         </div>
         <div className="flex flex-col justify-between flex-grow p-10">

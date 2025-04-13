@@ -7,17 +7,17 @@ import Certificates from "../components/Certificates/Certificates.tsx";
 import Skills from "../components/Skills/Skills.tsx";
 import OnTheWeb from "../components/OnTheWeb/OnTheWeb.tsx";
 import Languages from "../components/Languages/Languages.tsx";
-import Heading from "../components/Heading/Heading.tsx";
 import Hero from "../components/Hero/Hero.tsx";
+import DynamicTitle from "../components/DynanicTitle/DynanicTitle.tsx";
 
 const About: FC = () => {
   const { animationProps } = useFadeIn({ delay: 0 });
 
   return (
     <div className="my-0 mx-auto">
+      <DynamicTitle title="Portfolio | About" />
       <motion.div {...animationProps}>
         <Hero />
-        <Heading text="About" />
         <Work />
         <Bio />
         <Certificates />

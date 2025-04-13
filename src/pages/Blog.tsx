@@ -1,39 +1,46 @@
 import { FC } from "react";
 import { blogs } from "../data/blog";
-import { Link } from "react-router-dom";
 import { useFadeIn } from "../hooks/useFadeIn";
 import { motion } from "framer-motion";
 import Heading from "../components/Heading/Heading";
+import Button from "../components/Button/Button";
+import DynamicTitle from "../components/DynanicTitle/DynanicTitle";
 
 const Blog: FC = () => {
   const { animationProps } = useFadeIn({ delay: 0 });
 
   return (
     <motion.div {...animationProps}>
+      <DynamicTitle title="Portfolio | Blogs" />
       <Heading text="My Blog" />
       {blogs.length !== 0 && (
-        <ul>
-          {blogs.map((blog, index) => (
-            <li
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {blogs.map((blog) => (
+            <div
               key={blog.id}
-              className="bg-white mb-5 rounded-xl relative dark:bg-dark-bg dark:shadow-header-bg hover:shadow-lg  dark:text-dark-text p-3  hover:-translate-y-1 duration-300 transition-all"
+              className="flex flex-col dark:bg-dark-bg dark:border-none border border-[#E5E7EB] bg-white shadow-lg dark:shadow-header-bg rounded-xl overflow-hidden w-full hover:-translate-y-1 duration-300 transition-all"
             >
-              <Link key={blog.id} to={`/blog/${blog.id}`}>
-                <h2 className="text-2xl font-light tracking-wider dark:text-dark-text">
+              {/* <Link to={`/blogs/${blog.id}`}>
+                <div className="flex-shrink-0">
+                  <img
+                    src={blog.imageUrl}
+                    alt={blog.title}
+                    className="w-full h-52 object-cover rounded-xl"
+                  />
+                </div>
+              </Link> */}
+              <div className="flex flex-col justify-between flex-grow p-4">
+                <h2 className="text-xl font-semibold dark:text-white mb-2">
                   {blog.title}
                 </h2>
-                <p className="mt-3 leading-7 text-gray-700 dark:text-blog-text">
+                <p className="text-gray-600  mb-4 dark:text-dark-text">
                   {blog.description}
                 </p>
-              </Link>
-              {index === 0 && (
-                <span className="dark:bg-blue-700 bg-blue-500 text-xs text-white rounded-xl py-1 px-2 absolute right-0 top-0">
-                  New
-                </span>
-              )}
-            </li>
+                <Button text="See the blog" source={`/blog/${blog.id}`} />
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </motion.div>
   );

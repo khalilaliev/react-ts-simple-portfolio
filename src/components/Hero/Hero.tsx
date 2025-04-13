@@ -3,7 +3,7 @@ import logo from "../../assets/logo.jpg";
 const Hero = () => {
   return (
     <>
-      <div className="px-8 py-6 dark:bg-secondary-bg dark:text-dark-text bg-bg-custom rounded-xl flex justify-center">
+      <div className="px-8 py-6 dark:bg-secondary-bg dark:text-dark-text bg-bg-custom shadow-lg rounded-xl flex justify-center">
         <p>
           Hello I'm Khalil Aliiev. I'm a Front-End Developer based on Zürich!
         </p>
